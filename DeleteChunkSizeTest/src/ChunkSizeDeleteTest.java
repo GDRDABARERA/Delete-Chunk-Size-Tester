@@ -12,7 +12,7 @@ public class ChunkSizeDeleteTest {
 
     public static void main(String[] args) throws SQLException {
         // Create JDBC connection
-        System.out.println(args.length);
+
         buildConnection(args[0], args[1], args[2], args[3]);
 
         int[] chunkSize = {256, 512, 1000, 5000, 50000, 100000, 512000};
