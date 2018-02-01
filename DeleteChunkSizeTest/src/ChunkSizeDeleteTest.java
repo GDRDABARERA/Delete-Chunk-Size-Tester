@@ -26,7 +26,7 @@ public class ChunkSizeDeleteTest {
 
             // Insert 1M data into it.
             int n = Integer.parseInt(args[4]);
-            for (int i = 0; i > n; i++) {
+            for (int i = 0; i < n; i++) {
                 insertRowData();
             }
 
@@ -108,7 +108,7 @@ public class ChunkSizeDeleteTest {
      */
     public static void deleteRows(int LIMIT) throws SQLException {
         Statement deleteSt = null;
-        String sqlDeleteQuery = "DELETE FROM IDN_AUTH_SESSION_STORE WHERE  TENANT_ID=-1 LIMIT " + LIMIT + ";";
+        String sqlDeleteQuery = "DELETE FROM IDN_AUTH_SESSION_STORE_DUPLICATE WHERE  TENANT_ID=-1 LIMIT " + LIMIT + ";";
         try {
             deleteSt = conn.createStatement();
 
